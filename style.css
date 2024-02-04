@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Protest+Riot&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.navlist {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 1rem;
+}
+
+.navlist ul {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.navlist ul li a{
+    border: none;
+    font-size: 1.6rem;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: .4s;
+}
+.navlist ul li a:hover {
+    color: gray;
+    text-decoration-line: underline ;
+    text-decoration-color: gray;
+    text-underline-offset: 1rem;
+}
+
+.navlist h1 {
+    cursor: default;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navlist .check-box {
+    display: none;
+}
+.navlist input {
+    display: none;
+}
+
+.navlist .check-box i {
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+@media (width < 768px) {
+    .navlist .check-box {
+        display: block;
+    }
+
+    ul {
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 85px);
+        left: -100%;
+        top: 85px;
+        background: transparent;
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: center;
+        gap: 3rem;
+    }
+    .navlist #check:checked ~ ul {
+        left: 0;
+    }
+    .image {
+        grid-area: 1/1/2/2;
+    }
+
+    .home-content {
+        padding: 10rem 1rem 5rem 1rem;
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+.home-content {
+
+    min-height: 100vh;
+    margin: auto;
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.image {
+    display: grid;
+    place-items: center;
+}
+
+.image img {
+    border-radius: 100%;
+    width: min(25rem, 90%);
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+}
+
+.description {
+    line-height: 1.rem;
+    margin-bottom: 2rem;
+}
+
+.sub {
+    letter-spacing: 2px;
+    color: black;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 3rem;
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+
+
